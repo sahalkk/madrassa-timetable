@@ -102,16 +102,20 @@ const Timetable = () => {
                     {cols
                       ? cols.map((item, index) => (
                           <>
-                            <th
-                              key={index}
-                              style={{
-                                border: "1px solid black",
-                                padding: "10px",
-                                backgroundColor: "#9ca3af",
-                              }}
-                            >
-                              {item}
-                            </th>
+                            {!(item == "Grade" || item == "Class") ? (
+                              <th
+                                key={index}
+                                style={{
+                                  border: "1px solid black",
+                                  padding: "10px",
+                                  backgroundColor: "#9ca3af",
+                                }}
+                              >
+                                {item}
+                              </th>
+                            ) : (
+                              ""
+                            )}
                           </>
                         ))
                       : null}
@@ -121,19 +125,23 @@ const Timetable = () => {
                   {filteredData.map((rowItem) => (
                     <tr key={rowItem.id}>
                       {cols
-                        ? cols.map((item, index) => (
-                            <td
-                              key={index}
-                              style={{
-                                border: "1px solid black",
-                                padding: "7px",
-                                backgroundColor: "#e2e8f0",
-                                fontSize: "14px",
-                              }}
-                            >
-                              {rowItem[findKey(item)]}
-                            </td>
-                          ))
+                        ? cols.map((item, index) =>
+                            item != "Grade" && item != "Class" ? (
+                              <td
+                                key={index}
+                                style={{
+                                  border: "1px solid black",
+                                  padding: "7px",
+                                  backgroundColor: "#e2e8f0",
+                                  fontSize: "14px",
+                                }}
+                              >
+                                {rowItem[findKey(item)]}
+                              </td>
+                            ) : (
+                              ""
+                            )
+                          )
                         : null}
                     </tr>
                   ))}
