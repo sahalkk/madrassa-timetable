@@ -78,7 +78,7 @@ const Timetable = () => {
           BANGALORE, KARNATAKA
         </div>
       </nav>
-      <div className="flex-grow flex justify-center bg-gray-100 md:items-center time-table-div pt-4">
+      <div className="flex-grow flex justify-center bg-gray-100 md:items-center time-table-div pt-10">
         <div className="flex flex-col  md:text-lg">
           <div className="flex justify-center mt-2 md:mb-6 space-x-4">
             <label htmlFor="dynamicDropdown">Select Class:</label>
