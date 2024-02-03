@@ -133,7 +133,7 @@ const Timetable = () => {
                 </thead>
                 <tbody>
                   {filteredData.map((rowItem, rowIndex) => (
-                    <tr key={rowItem.id} className={`bg-white  dark:bg-gray-800 dark:border-gray-700 ${((Math.floor(rowIndex / 2)) % 2 == 1) ? '' : 'bg-sky-100'} ${(rowIndex % 2 == 0) ? 'border-t' : ''}`}>
+                    <tr key={rowItem.id} className={`dark:bg-gray-800 dark:border-gray-700 ${((Math.floor(rowIndex / 2)) % 2 == 1) ? '' : 'bg-sky-100'} ${(rowIndex % 2 == 0) ? 'border-t' : ''}`}>
                       {cols
                         ? cols.map((item, index) =>
                           item != "Grade" && item != "Class" ? (
