@@ -1,3 +1,13 @@
 .navbar{
     width: auto
 }
+*{
+    text-wrap: wrap !important;
+}
+.time-table-div{
+    background-image: url('/public/bg.webp');
+    /* background-position: right bottom, left top; */
+    background-size: auto;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat, repeat;
+}
