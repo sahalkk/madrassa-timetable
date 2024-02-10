@@ -11,3 +11,15 @@
     background-size: 100vw 100vh;
     background-repeat: no-repeat, repeat;
 }
+
+.cl-0{
+    background-color: white;
+}
+
+.cl-1{
+    background-color: rgb(183, 211, 255);
+}
+
+.cl-2{
+    background-color: rgb(194, 255, 194);
+}
